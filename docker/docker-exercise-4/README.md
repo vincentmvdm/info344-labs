@@ -1,10 +1,10 @@
-# Docker Excercise Two
+# Docker Excercise Four
 
-This is a simple challenge that involves publishing ports and setting environment variables when running a Docker container.
+This is a simple challenge that involves publishing ports and setting environment variables, as well as mounting volumes and creating a Dockerfile when building and running a Docker container.
 
 You will **NOT** need to modify `main.go`
 
-You will **NOT** need to modify the `Dockerfile`
+You **WILL** need to modify the `Dockerfile`
 
 ## What do I do?
 
@@ -12,8 +12,11 @@ Build this directory into a docker container. Remember to build the go binary fo
 
 When running your docker container you will need to:
 
-- Set the `PORT` environment variable on your container
-- Publish the same port as `PORT` on the container to the same port on your host machine
+- Set an environment variable for the PORT
+- Set an environment variavle for the FILEPATH
+- Publish the same port as the environment variable PORT
+- Mount a volume containing `hooray.txt` into your container corresponding to `FILEPATH`
+- Build the `Dockerfile` with appropraite container build steps
 
 Take another look at [Dr. Stearn's Docker tutorial](https://drstearns.github.io/tutorials/docker/) if you need hints!
 
