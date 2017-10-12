@@ -9,7 +9,7 @@ Go into the `test_handlers` folder, there is a simple program that listens on `l
 
 We want to test the ComplimentHandler to make sure that it is behaving as it should. 
 
-
+In `handlers_test.go`, there is a stub of a function `TestComplimentHandler`. 
 Links: [Source](https://elithrar.github.io/article/testing-http-handlers-go/ "Testing Your (HTTP) Handlers in Go "), 
 
 ## Unit Testing Practice
@@ -21,5 +21,5 @@ In `/swears`, is a simple program that reads in two text files: a `known_swears.
 
 The previous developer was tired when he wrote this code, so there are _definitely_ no bugs in it.
 
-Your job is to finish writing the unit tests for the four function stubs in `swears_test.go`.
+Finish writing the unit tests for the four function stubs in `swears_test.go`.
 Try and think of weird edge cases as you write these tests! How are the files being read in? What swear words is it checking for, etc?
