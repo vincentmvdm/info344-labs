@@ -13,14 +13,13 @@ We want to test the ComplimentHandler to make sure that it is behaving as it sho
 Links: [Source](https://elithrar.github.io/article/testing-http-handlers-go/ "Testing Your (HTTP) Handlers in Go "), 
 
 ## Unit Testing Practice
-Now that you've been properly complimented, let's get to more practical matters. You recently started working for the FCC on a team that automatically detects swear words on television. 
+Now that you've been properly complimented, let's get to more practical matters. You recently started working for the FCC on a team that works on a `swears` program in go. It automatically detects swear words in text files.
 
-TODO: rewrite this. `They brought you on because they know that you have experience writing unit tests
-Before you arrived this project had recently hit a snag, and the lead developer`
+This project recently hit a snag when their lead developer quit to go work for the CIA. The code is full of bugs, and he didn't write any unit tests! Your job is to write unit tests for the `swears.go` file to make sure that it is working properly, and handling edge cases!
 
 In `/swears`, is a simple program that reads in two text files: a `known_swears.txt` file that has every single swearword ever in it, _totally_, and a file passed as a command line argument, that is then scanned for any swear words. The program then reports the tally of each swear word that it finds in the text file.
 
-Ethan was tired when he wrote this code, so there are _definitely_ no bugs in it. 
+The previous developer was tired when he wrote this code, so there are _definitely_ no bugs in it.
 
 Your job is to finish writing the unit tests for the four function stubs in `swears_test.go`.
 Try and think of weird edge cases as you write these tests! How are the files being read in? What swear words is it checking for, etc?
