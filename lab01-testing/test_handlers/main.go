@@ -20,18 +20,7 @@ func main() {
 	//fmt.Println("Hello World!")
 	mux := http.NewServeMux()
 
-	compliments := []string{"wonderful", "strong",
-		"beautiful", "smart", "loyal", "friendly",
-		"good", "asynchronous", "savvy", "handsome",
-		"meme-y", "athletic", "intelligent", "good at Golang",
-		"creative", "groundbreaking", "artistic", "suave",
-		"capable", "bodacious"}
-	//create a new ComplimentHandler struct
-	complimentHandler := &ComplimentHandler{
-		Compliments: compliments,
-	}
-
-	mux.Handle("/compliment", complimentHandler)
+	mux.HandleFunc("/compliment", ComplimentHandler)
 
 	fmt.Printf("server is listening at https://%s\n", addr)
 	log.Fatal(http.ListenAndServe(addr, mux))
