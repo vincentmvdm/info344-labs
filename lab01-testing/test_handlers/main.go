@@ -20,11 +20,6 @@ func main() {
 	//fmt.Println("Hello World!")
 	mux := http.NewServeMux()
 
-	//create a new ComplimentHandler struct
-	// complimentHandler := &ComplimentHandler{
-	// 	Compliments: compliments,
-	// }
-
 	mux.HandleFunc("/compliment", ComplimentHandler)
 
 	fmt.Printf("server is listening at https://%s\n", addr)
