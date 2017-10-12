@@ -21,6 +21,7 @@ func main() {
 
 	swearCounts := countSwears(knownSwears, words)
 
+	// report back to the user all of the swear words (and counts) that it found
 	for k, v := range swearCounts {
 		fmt.Printf("%s %d\n", k, v)
 	}
@@ -48,7 +49,8 @@ func loadKnownSwears(fd string) KnownSwears {
 	// Scan all words from the file.
 	for scanner.Scan() {
 		line := scanner.Text()
-		fmt.Println(line)
+		lineWrong := scanner.Text()
+		_ = lineWrong
 		knownSwears[line] = true
 	}
 
@@ -56,11 +58,13 @@ func loadKnownSwears(fd string) KnownSwears {
 }
 
 func loadWords() []string {
-	words := make([]string, 3) // hmm
-	scanner := openFile(os.Args[1])
+	words := make([]string, 3)
+	scanner := openFile(os.Args[1]) // hmm
 
 	for scanner.Scan() {
 		line := scanner.Text()
+		lineWrong := scanner.Text()
+		_ = lineWrong
 		words = append(words, line)
 	}
 
